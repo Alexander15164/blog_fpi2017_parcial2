@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bloggito</title>
+    <script type="text/javascript">
+      document.yourform.psize.selectedIndex = 0
+    </script>
+  </head>
+  <body>
+      <header>
+        <h1>Bloggito</h1>
+      </header>
+      <nav>
+        <ul>
+          <li>Inicio</li>
+          <li>Categorias</li>
+          <li>Acerca de</li>
+        </ul>
+
+        <input type="button"value="Iniciar sesión">
+        <input type="button"value="Regsitrarse">
+        <input type="button"value="cerrar sesión">
+        <br>
+        <input type="button" value="Crear una nueva publicacion" disabled>
+      </nav>
+      <div id="registro">
+          <h1>Crea tu cuenta en Bloggito</h1>
+          <form id="form" action="index.html" method="post">
+            <label>Nombre Completo</label>
+            <input type="text" placeholder="Escribe tu nombre">
+            <label>Nombre de usuario</label>
+            <input type="text">
+            <label >Fecha de nacimiento</label>
+            <select class="" name="hola"required  >
+              <option value="Mes" selected>Mes</option>
+              <option value="Enero">Enero</option>
+              <option value="Febrero">Febrero</option>
+              <option value="Marzo">Marzo</option>
+              <option value="Abril">Abril</option>
+              <option value="Mayo">Mayo</option>
+              <option value="Junio">Junio</option>
+              <option value="Julio">Julio</option>
+              <option value="Agosto">Agosto</option>
+              <option value="Septiembre">Septiembre</option>
+              <option value="Octubre">Octubre</option>
+              <option value="Noviembre">Noviembre</option>
+              <option value="Diciembre">Diciembre</option>
+            </select>
+          </form>
+      </div>
+      <footer>
+        2017
+      </footer>
+
+
+  </body>
+</html>
