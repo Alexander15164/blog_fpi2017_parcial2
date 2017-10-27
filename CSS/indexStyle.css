@@ -1,0 +1,226 @@
+body{
+  background-color: #000000;  height: 100%;
+}
+#cabecera1{
+  background: -webkit-linear-gradient( grey , black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient( grey, black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient( grey, black); /* For Firefox 3.6 to 15 */
+  background: linear-gradient( grey , black); /* Standard syntax */
+  width: 100%;
+  height: 80px;
+  position: absolute;
+    top: 0%;
+    left: 0%
+}
+#cabecera2{
+  background-color: rgb(238, 173, 6);
+  width: 100%;
+  height: 50px;
+  position: absolute;
+    top: 80px;
+    left: 0%;
+
+}
+#principal{
+  background-color:#f7f7f7;
+  width: 90%;
+  height:100%;
+
+
+  position:relative;
+    top: 50%;
+    left: 5%;
+  -webkit-border-radius: 18;
+  -moz-border-radius: 18;
+  border-radius:40px;
+  border-bottom: none !important;
+}
+#nombre::first-letter{
+  font-size: 110px;
+  color: white;
+  background-color:rgb(238, 173, 6);
+  padding-left: 100px;
+  }
+#nombre{
+  font-size: 340%;
+  color:#6a6a6a;
+  position: absolute;
+  top: -10px;
+  text-shadow: 5px 1px 0 #ccc,
+                 0 2px 0 #c9c9c9,
+                 0 3px 0 #bbb,
+                 0 4px 0 #b9b9b9,
+                 0 5px 0 #b9b9b9,
+                 0 6px 1px rgba(0,0,0,.1),
+                 0 0 5px rgba(0,0,0,.1),
+                 0 0 7px rgba(0,0,0,.1),
+                 0 1px 3px rgba(0,0,0,.3),
+                 0 3px 5px rgba(0,0,0,.2),
+                 0 5px 10px rgba(0,0,0,.25),
+                 0 10px 10px rgba(0,0,0,.2),
+                 10px 20px 10px rgba(0,0,0,.15);
+  }
+#slogan {
+  width:300px;
+  height:80px;
+  background:rgb(238, 173, 6);;
+  position:absolute;
+  font-style: oblique;
+  top: 5%;
+  left: 470px;
+  -moz-left:40%
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight:bolder;
+  font-size: 30px;30px
+  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  color: white;
+  font-family: fantasy;
+  text-shadow: 0 1px 0 #ccc,
+                 0 2px 0 #c9c9c9,
+                 0 3px 0 #bbb,
+                 0 4px 0 #b9b9b9,
+                 0 5px 0 #aaa,
+                 0 6px 1px white,
+                 0 0 5px rgb(238, 173, 6),
+                 0 1px 3px rgba(0,0,0,.3),
+                 0 3px 5px rgba(0,0,0,.2),
+                 0 5px 10px rgba(0,0,0,.25),
+                 0 10px 10px rgba(0,0,0,.2),
+                 0 20px 20px rgb(238, 173, 6);
+                 box-shadow: 0 1px 0 #ccc,
+                                  0 2px 0 #c9c9c9,
+                                  0 3px 0 #bbb,
+                                  0 4px 0 #b9b9b9,
+                                  0 5px 0 #aaa,
+                                  0 6px 1px rgba(0,0,0,.1),
+                                  0 0 5px rgba(0,0,0,.1),
+                                  0 1px 3px rgba(0,0,0,.3),
+                                  0 3px 5px rgba(0,0,0,.2),
+                                  0 5px 10px rgba(0,0,0,.25),
+                                  0 10px 10px rgba(0,0,0,.2),
+                                  0 20px 20px rgba(0,0,0,.15);
+  }
+#slogan:before {
+  content:"  ";
+  position:absolute;
+  right:100%;
+  top:26px;
+  width:10px;
+  height:0;
+  border-top:15px solid transparent;
+  border-right:50px solid rgb(238, 173, 6);
+  border-bottom:15px solid transparent;}
+#navegador{
+  background-color: rgb(238, 173, 6);
+  height: 50px;
+  font-style: oblique;
+  color: white;
+}
+#navegador ul{
+   list-style-type: none;
+
+   font-size: 145%
+}
+#navegador li{
+   display: inline;
+
+   margin: 0 10px 0 0;
+}
+#navegador a{
+  color: white;
+  text-decoration: none;
+  font-weight:400;
+  content:"   ";
+  padding-left: 35px;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-family: fantasy;
+}
+#nombre a{
+  color: #6a6a6a;
+  text-decoration: none;
+}
+.sesion{
+  background-color: #6a6a6a;
+  position: absolute;
+  top: 16.6%;
+  left: 72%;
+  border: none;
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius:5px;
+  padding-top: 0.5%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  text-align: center;
+  color: white;
+  font-weight:bolder;
+  font-family: fantasy;
+  box-shadow: 0 1px 0 #ccc,
+                   0 2px 0 #c9c9c9,
+                   0 3px 0 #bbb,
+                   0 4px 0 #b9b9b9,
+                   0 5px 0 #aaa,
+                   0 6px 1px rgba(0,0,0,.1),
+                   0 0 5px rgba(0,0,0,.1);
+}
+#cerrar{
+  display: none;
+}
+#registrarse{
+  position: absolute;
+  top: 16.6%;
+  left: 87%;
+}
+#nueva{
+  display: none;
+  position: absolute;
+  top: 16.6%;
+  left: 87%;
+}
+#lateral{
+  border: 3px solid rgb(238, 173, 6);
+  width:30%;
+  height: 500px;
+  position: absolute;
+  top: 20.6%;
+  left: 69.5%;
+}
+#recientes{
+  border: 3px solid rgb(238, 173, 6);
+  width:69%;
+  height: 500px;
+  position: relative;
+  top: 21%;
+}
+#anteriores{
+  border: 3px solid rgb(238, 173, 6);
+  width:99.6%;
+  height: 300px;
+  position: relative;
+  left: 0%;
+  bottom: 0%;
+}
+#final{
+  border: 3px solid grey;
+  background-color: #6a6a6a;
+  color: white;
+  font-family: fantasy;
+  width:99.6%;
+  height: 50px;
+  position: relative;
+  left: 0%;
+  bottom: 0%;
+}
