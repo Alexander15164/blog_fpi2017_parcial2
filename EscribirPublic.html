@@ -3,23 +3,30 @@
   <head>
       <title>Escribir nueva publicacion</title>
     <meta charset="utf-8"/>
+    <script src="JAVASCRIPT/index.js"></script>
   </head>
   <body>
       <header>Escribir nueva publicacion</header>
-      <div>
+      <form method="POST" action="PHP/Entradas.php">
           <fieldset>
           <p>Titulo de la publicacion</p>
-          <input type="text" placeholder="Escriba un titulo..." id="sTitulo"/><br>
+          <input type="text" placeholder="Escriba un titulo..." name="titulo"/><br>
           <p>Publicacion</p>
-          <textarea id="sPublicacion"></textarea>
+          <textarea name="publicacion" rows="8" cols="8"></textarea>
           </fieldset>
           <p>Subir una imagen</p>
           <input type="file" accept="image/*" id="btnImagenes"/><br>
           <p>Categorias</p>
-          <select>
-              <option value="0">Anime</option>
+          <select name="categoria">
+              <option value="0">Noticias</option>
+              <option value="1">Tecnologia</option>
           </select>
-          
-      </div>
+          <p>Autor</p>
+          <input type="text" name="autor"/><br/>
+          <p>Tiempo</p>
+          <input type="text" name="tiempo" id="tiempo"/><br/>
+          <button type="submit">publicar</button>
+      </form>
+     
   </body>
-</html>  
+</html>   
