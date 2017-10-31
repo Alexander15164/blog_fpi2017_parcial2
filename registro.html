@@ -2,58 +2,95 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Bloggito</title>
-    <script type="text/javascript">
-      document.yourform.psize.selectedIndex = 0
-    </script>
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="CSS/indexStyle.css">
+    <!-- <script src="JAVASCRIPT/registro.js" charset="utf-8"></script> -->
+    <script src="JAVASCRIPT/index.js" charset="utf-8"></script>
   </head>
   <body>
-      <header>
-        <h1>Bloggito</h1>
-      </header>
-      <nav>
-        <ul>
-          <li>Inicio</li>
-          <li>Categorias</li>
-          <li>Acerca de</li>
-        </ul>
+  <div id="cabecera1">
+  </div>
+  <div id="cabecera2">
+  </div>
+  <div id="principalreg">
+    <header>
+      <h1 id="nombre"><a href="index.html">Bloggito</a></h1>
+    </header>
+    <div id="slogan">Dicelo tú mismo</div>
+    <br><br><br><br><br><br><br><br>
 
-        <input type="button" value="Iniciar sesión">
-        <input type="button" value="Regsitrarse">
-        <input type="button" value="cerrar sesión">
-        <br>
-        <input type="button" value="Crear una nueva publicacion" disabled>
-      </nav>
-      <div id="registro">
-          <h1>Crea tu cuenta en Bloggito</h1>
-          <form id="form" action="index.html" method="post">
-            <label>Nombre Completo</label>
-            <input type="text" placeholder="Escribe tu nombre">
-            <label>Nombre de usuario</label>
-            <input type="text">
-            <label >Fecha de nacimiento</label>
-            <input type="date" step="1" name="fecha" max="2002-12-01" min="1900-01-01" value="2002-12-01"/>
-            <!--<select class="" name="hola" required  >
-              <option value="Mes" selected>Mes</option>
-              <option value="Enero">Enero</option>
-              <option value="Febrero">Febrero</option>
-              <option value="Marzo">Marzo</option>
-              <option value="Abril">Abril</option>
-              <option value="Mayo">Mayo</option>
-              <option value="Junio">Junio</option>
-              <option value="Julio">Julio</option>
-              <option value="Agosto">Agosto</option>
-              <option value="Septiembre">Septiembre</option>
-              <option value="Octubre">Octubre</option>
-              <option value="Noviembre">Noviembre</option>
-              <option value="Diciembre">Diciembre</option>
-            </select>-->
-          </form>
-      </div>
-      <footer>
+    <nav id="navegador">
+      <ul>
+        <li><a href="index.html" class="barra"> Inicio </a></li>
+        <li><a href="#" class="barra"> Categorias</a></li>
+        <li><a href="#" class="barra"> Acerca de</a></li>
+        <li><a href="#" class="barra"> Mas vistas</a></li>
+      </ul>
+      <!-- <input type="button"value="Iniciar sesión" id="iniciar" class="sesion">
+      <input type="button"value="Registrarse" id="registrarse" class="sesion" onclick="formRegistro()"  >
+      <input type="button"value="Cerrar sesión" id="cerrar" class="sesion">
+      <input type="button" value="nueva" disabled id="nueva" class="sesion"> -->
+    </nav>
+    <div id=inicial>
+      <p>B</p>
+    </div>
+    <footer id="final2">
+
         2017
       </footer>
+    </div>
 
+    <div id="lateral2">
+      <h1 id="tituloreg">Crea tu cuenta en Bloggito</h1>
+      <form id="form" action="PHP/usuarios.php" method="POST" >
 
+        <label>Nombre Completo</label>
+        <br><br>
+        <input type="text" name="nombre" placeholder="Nombre" class="nombre" required autofocus>
+        <input type="text" name="apellido" placeholder="Apellido" class="nombre" required>
+        <br><br><br>
+        <label>Nombre de usuario</label>
+        <br><br>
+        <input type="text" required  name="usuario" id="apodo" placeholder="Nickname">
+        <br><br><br>
+        <label >Fecha de nacimiento</label>
+        <br><br>
+        <!--<input type="date" name="" value="">-->
+        <select name="mes" required>
+          <option value="0" selected>Mes</option>
+          <option value="1">Enero</option>
+          <option value="2">Febrero</option>
+          <option value="3">Marzo</option>
+          <option value="4">Abril</option>
+          <option value="5">Mayo</option>
+          <option value="6">Junio</option>
+          <option value="7">Julio</option>
+          <option value="8">Agosto</option>
+          <option value="9">Septiembre</option>
+          <option value="10">Octubre</option>
+          <option value="11">Noviembre</option>
+          <option value="12">Diciembre</option>
+        </select>
+        <input type="number" name="dia" placeholder="Día" class="fecha" min="1" max="31"  required>
+        <input type="number" name="ao" placeholder="Año" class="fecha" min="1800" max="2017"  required> -->
+        <br><br><br>
+        <label>Correo electrónico</label>
+        <br><br>
+        <input type="email" name="email"  id="email" placeholder="Correo" required>
+        <br><br><br>
+        <label>Contraseña</label>
+        <br><br>
+        <input type="password"   id="pass"  class="pass" required>
+        <label class="mostrar">Mostrar</label>
+        <br><br><br>
+        <label>Confirmar contraseña</label>
+        <br><br>
+        <input type="password" required  id="confirmpass" name="pass" class="pass">
+        <label class="mostrar">Mostrar</label>
+        <input type="text" name="iusuario" id="iusuario"/>
+        <br><br>
+        <input type="submit"  value="Registrar" class="submmit">
+      </form>
+    </div>
   </body>
 </html>

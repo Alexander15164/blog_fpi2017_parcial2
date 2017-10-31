@@ -2,32 +2,65 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Inicio Sesion</title>
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" href="CSS/indexStyle.css">
+    <!-- <script src="JAVASCRIPT/registro.js" charset="utf-8"></script> -->
+    <!--<script src="JAVASCRIPT/index.js" charset="utf-8"></script>-->
+    <script src="JAVASCRIPT/metodos.js" charset="utf-8"></script>
   </head>
-  <body>
+  <div id="cabecera1">
+  </div>
+  <div id="cabecera2">
+  </div>
+  <div id="principalreg">
     <header>
-  		<h1>Bloggito</h1>
-  	</header>
-    <nav id="navegacion">
-  		<ul>
-  			<li class="selected"><a href="#">Inicio</a></li>
-  			<li><a href="#">Categoria</a></li>
-  			<li><a href="#">Acerca de</a></li>
-  			<li><a href="#">Contacto</a></li>
-  		</ul>
+      <h1 id="nombre"><a href="index.html">Bloggito</a></h1>
+    </header>
+    <div id="slogan">Dicelo tú mismo</div>
+    <br><br><br><br><br><br><br><br>
+
+    <nav id="navegador">
+      <ul>
+        <li><a href="index.html" class="barra"> Inicio </a></li>
+        <li><a href="#" class="barra"> Categorias</a></li>
+        <li><a href="#" class="barra"> Acerca de</a></li>
+        <li><a href="#" class="barra"> Mas vistas</a></li>
+      </ul>
+      <!-- <input type="button"value="Iniciar sesión" id="iniciar" class="sesion">
+      <input type="button"value="Registrarse" id="registrarse" class="sesion" onclick="formRegistro()"  >
+      <input type="button"value="Cerrar sesión" id="cerrar" class="sesion">
+      <input type="button" value="nueva" disabled id="nueva" class="sesion"> -->
     </nav>
-    <h3>Registrarse/Iniciar Sesion</h3>
-    <h5>Para continuar en el blog</h5>
-    <form class="" action="#" method="post">
-      <label for="user">Usuario: </label>
-      <input type="text" name="user" placeholder="user o email">
-      <br>
-      <br>
-      <label for="pass">Contraseña: </label>
-      <input type="password" name="pass" placeholder="pass">
-      <br>
-      <input type="submit" name="ingresar" value="Ingresar">
-    </form>
-    <input type="button" name="crearCuenta" value="Crear Cuenta">
+    <div id=inicial>
+      <p>B</p>
+    </div>
+    <footer id="final2">
+
+        2017
+      </footer>
+    </div>
+
+    <div id="lateral2">
+
+      <h1 id="titulo">Iniciar Sesion</h1>
+
+      <!--<form id="sesion" action="index.html">-->
+        <br><br>
+        <label for="user">Usuario: </label>
+        <br><br>
+        <input type="text" name="user" id="user" placeholder="user o email">
+        <br><br><br>
+        <label for="pass">Contraseña: </label>
+        <br><br>
+        <input type="password" name="pass" placeholder="pass" class="pass" id="pas">
+        <br><br><br>
+        <input type="button" name="ingresar" value="Ingresar" class="submmit" onclick="inicioSesion()"/>
+      <!--</form>-->
+      <input type="button" name="crearCuenta" value="Registrarse" id="irregistro" class="submmit" onclick="formRegistro()">
+
+    </div>
+
+
+
   </body>
 </html>
