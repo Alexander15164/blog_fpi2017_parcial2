@@ -19,10 +19,7 @@ if($_POST){
         $todasLosUsuariosJSON[] = $usuarios;
         $todasLosUsuariosPHP = json_encode($todasLosUsuariosJSON);
         file_put_contents('../JSON/Usuarios.json', $todasLosUsuariosPHP);
+        header("Location: ../index.html");
     }
 }
 ?>
-<script>
-    alert("creado con exito");
-    window.location.reload();
-</script>

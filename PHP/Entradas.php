@@ -45,9 +45,7 @@ if($_POST){
         $TodasLasEntradasJSON[] = $entradas;
         $TodasLasEntradasPHP = json_encode($TodasLasEntradasJSON);
         file_put_contents('../JSON/publicaciones.json', $TodasLasEntradasPHP);
+        header("Location: ../index.html");
     }
 }
 ?>
-<script>
-    window.location();
-</script>

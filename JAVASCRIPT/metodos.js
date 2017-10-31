@@ -1,22 +1,30 @@
 window.onload = llamarUsuarios();
-function llamarUsuarios() {
+    function llamarUsuarios() {
     var llamador;
+    var url2 = document.location.href;
+    var loc2 = url2.split('/')[2];
+    var url3 = "http://"+loc2+"/blog_fpi2017_parcial2/JSON/Usuarios.json";
     var almacenador;
     if (window.XMLHttpRequest) { // Mozilla, Safari, ...
         llamador = new XMLHttpRequest();
     } else if (window.ActiveXObject) { // IE 8 y anteriores
         llamador = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    llamador.open('GET', 'http:///192.168.1.17/blog_fpi2017_parcial2/JSON/Usuarios.json', true);
-    llamador.onload = function () {
+    
+    llamador.onreadystatechange = function () {
+        if(this.readyState == 4 && this.status == 200){
         almacenador = JSON.parse(llamador.responseText);
+        console.log(almacenador.length);
         console.log(almacenador);
         puente(almacenador);
+        }
+        
     };
+    llamador.open('GET', url3 , true);
     llamador.send();
     console.log(almacenador);
-    var almacenador;
-}
+    }
+
 var conectora;
 function puente (arra){
     conectora = arra;
