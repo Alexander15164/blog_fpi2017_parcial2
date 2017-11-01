@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+     <meta http-equiv="Expires" content="0">
+        <meta http-equiv="Last-Modified" content="0">
+        <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="CSS/indexstyle2.css">
+    <!-- <script src="JAVASCRIPT/registro.js" charset="utf-8"></script> -->
+    <script src="JAVASCRIPT/index.js" charset="utf-8"></script>
+  </head>
+  <body>
+  <div id="cabecera1">
+  </div>
+  <div id="cabecera2">
+  </div>
+  <div id="principalRegistro">
+    <header>
+      <h1 id="nombre"><a href="index.html">Bloggito</a></h1>
+    </header>
+    <div id="slogan">Dicelo tú mismo</div>
+    <nav id="navegador">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Categorias</a>
+                        <ul>
+                            <li><a onclick="llamar(1)">Deportes</a></li>
+                            <li><a onclick="llamar(2)">Comedia</a></li>
+                            <li><a onclick="llamar(3)">Politica</a></li>
+                            <li><a onclick="llamar(4)">Higiene</a></li>
+                            <li><a onclick="llamar(5)">Juegos</a></li>
+                            <li><a onclick="llamar(6)">Anime</a></li>
+                            <li><a onclick="llamar(7)">Tecnologia</a></li>
+                            <li><a onclick="llamar(8)">Naturaleza</a></li>
+                            <li><a onclick="llamar(9)">Ciencias</a></li>
+                            <li><a onclick="llamar(10)">Personal</a></li>
+                            <li><a onclick="llamar(11)">Otros</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <input type="button" value="Iniciar sesión" id="iniciar" class="sesion" onclick="formingreso()">
+                <input type="button" value="Registrarse" id="registrarse" class="sesion" onclick="formRegistro()"  >
+                <input type="button" value="Cerrar sesión" id="cerrar" class="sesion" onclick="cerrar()">
+                <input type="button" value="nueva Publicacion" id="nueva" class="sesion" onclick="publicar()">
+
+    </nav>
+            <br>
+            <div id="lateral3">
+              <br><br><br>
+              <h1 id="tituloreg">Crea tu cuenta en Bloggito</h1>
+              <form id="form" action="PHP/usuarios.php" method="POST" >
+
+                <label>Nombre Completo</label>
+                <br><br>
+                <input type="text" name="nombre" placeholder="Nombre" class="nombre" pattern="[A-Za-z ]{4,16}" required autofocus>
+                <input type="text" name="apellido" placeholder="Apellido" class="nombre" required>
+                <br><br><br>
+                <label>Nombre de usuario</label>
+                <br><br>
+                <input type="text" required  name="usuario" id="apodo" placeholder="Nickname">
+                <br><br><br>
+                <label >Fecha de nacimiento</label>
+                <br><br>
+                <!--<input type="date" name="" value="">-->
+                <select name="mes" required>
+                  <option value="0" selected>Mes</option>
+                  <option value="1">Enero</option>
+                  <option value="2">Febrero</option>
+                  <option value="3">Marzo</option>
+                  <option value="4">Abril</option>
+                  <option value="5">Mayo</option>
+                  <option value="6">Junio</option>
+                  <option value="7">Julio</option>
+                  <option value="8">Agosto</option>
+                  <option value="9">Septiembre</option>
+                  <option value="10">Octubre</option>
+                  <option value="11">Noviembre</option>
+                  <option value="12">Diciembre</option>
+                </select>
+                <input type="number" name="dia" placeholder="Día" class="fecha" min="1" max="31"  required>
+                <input type="number" name="ao" placeholder="Año" class="fecha" min="1800" max="2017"  required> -->
+                <br><br><br>
+                <label>Correo electrónico</label>
+                <br><br>
+                <input type="email" name="email"  id="email" placeholder="Correo" required>
+                <br><br><br>
+                <label>Contraseña</label>
+                <br><br>
+                <input type="password"   id="pass"  class="pass" required>
+                <label class="mostrar" id="contra1" onmouseover="descubrir()" onmousedown="cubrir()">Mostrar</label>
+                <br><br><br>
+                <label>Confirmar contraseña</label>
+                <br><br>
+                <input type="password" required  id="confirmpass" name="pass" class="pass">
+                <label class="mostrar" id="contra2" onclick="descubrir2()">Mostrar</label>
+
+                <br><br>
+                <input type="submit"  value="Registrar" class="submmit">
+              </form>
+             <br><br>
+            </div>
+
+      <footer id="final3">
+        <br><br>
+        <h4>2017 Estas en la pagina de Registro</h4>
+        <br><br>
+      </footer>
+  </div>
+  </body>
+</html>
