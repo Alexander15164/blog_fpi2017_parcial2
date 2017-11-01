@@ -1,5 +1,5 @@
 
-function llamarPublicaciones() {
+function llamarPublicaciones(pan) {
     var llamador;
     var url2 = document.location.href;
     var loc2 = url2.split('/')[2];
@@ -16,9 +16,14 @@ function llamarPublicaciones() {
             almacenador = JSON.parse(llamador.responseText);
             console.log(almacenador.length);
             console.log(almacenador);
-            //puente2(almacenador);
-            publicar2(almacenador);
-        }
+            if(pan==3){
+            publicar3(almacenador);    
+            }else if(pan==4){
+            publicar4(almacenador);    
+            }else{
+                publicar2(almacenador); 
+            }
+            }
 
     };
     llamador.open('GET', url3, true);
@@ -59,22 +64,27 @@ function publicar2(vector) {
 
     var a = document.createElement("a");
     a.innerHTML = "Ver publicacion";
-    a.setAttribute("href", "mostrarArticu.html");
+    //a.setAttribute("href", "mostrarArticu.html");
     a.setAttribute("onclick","cargar('"+vector[i].identificador+"')");
     capa.appendChild(a);
   }
 }
 function cargar(id){
+        console.log(id);
         pasarVariables("mostrarArticu.html", id);
+        console.log(id);
       }
 
 
       function pasarVariables(pagina,nombres) {
+          console.log(pagina);
       pagina +="?";
+      console.log(pagina);
       nomVec = nombres.split(",");
       for (i=0; i<nomVec.length; i++)
-        pagina += "id" + "=" + escape(eval(nomVec[i]))+"&";
+      pagina += "id" + "=" + escape(eval(nomVec[i]))+"&";
       pagina = pagina.substring(0,pagina.length-1);
+      console.log(pagina);
       location.href=pagina;
 
     }

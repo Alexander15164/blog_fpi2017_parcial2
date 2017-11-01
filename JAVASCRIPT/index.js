@@ -10,6 +10,9 @@ function mostrar() {
 function publicar() {
     window.location.replace("EscribirPublic.html");
 }
+function categoria() {
+    window.location.replace("categoria.html");
+}
 function proceso() {
     document.getElementById("iniciar").style.display = "none";
     document.getElementById("registrarse").style.display = "none";
@@ -66,7 +69,7 @@ if (url1 == 1 || url1 == 2) {
     }}
 } else {
     window.onload = function verificar() {
-        llamarPublicaciones();
+        llamarPublicaciones(url1);
     if (localStorage.user != undefined) {
         proceso();
     } else {
@@ -108,8 +111,10 @@ function verificadorURL() {
         return contr = 1;
     } else if (loc == "registro.html") {
         return contr = 2;
-    } else if (loc == "index.html") {
-        return contr = 0;
+    } else if (loc == "categoria.html") {
+        return contr = 3;
+    }else if(loc == "mostrarArticu.html"){
+        return contr = 4;
     }
     return;
 }

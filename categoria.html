@@ -1,63 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Bloggito</title>
-  </head>
-  <body>
-    <div id="cabecera1">
-    </div>
-    <div id="cabecera2">
-    </div>
-    <div id="principal">
-      <header>
-        <h1>Bloggito</h1>
-      </header>
-      <nav>
-        <ul>
-          <li>Inicio</li>
-          <li>Categorias</li>
-          <li>Acerca de</li>
-        </ul>
-
-        <input type="button"value="Iniciar sesión">
-        <input type="button"value="Regsitrarse">
-        <input type="button"value="cerrar sesión">
-        <br>
-        <input type="button" value="Crear una nueva publicacion" disabled>
-      </nav>
-      <section>
-
-      </section>
-      <section>
-        <div class="pasada">
-          <img src="#" alt="imagen de publicacion">
-          <p id="pasada1" class="titulo"></p>
-          <p id="fecha1" class="fechas"></p>
+    <head>
+        <meta charset="utf-8">
+        <title>Bloggito</title>
+        <script src="JAVASCRIPT/index.js"></script>
+        <script src="JAVASCRIPT/categorias.js"></script>
+        <script src="JAVASCRIPT/public.js"></script>
+    </head>
+    <body>
+        <div id="cabecera1">
         </div>
-        <div class="pasada">
-          <img src="#" alt="imagen de publicacion">
-          <p id="pasada2" class="titulo"></p>
-          <p id="fecha2" class="fechas"></p>
+        <div id="cabecera2">
         </div>
-        <div class="pasada">
-          <img src="#" alt="imagen de publicacion">
-          <p id="pasada3" class="titulo"></p>
-          <p id="fecha3" class="fechas"></p>
-        </div>
-        <div class="pasada">
-          <img src="#" alt="imagen de publicacion">
-          <p id="pasada4" class="titulo"></p>
-          <p id="fecha4" class="fechas"></p>
-        </div>
-      </section>
-      <aside>
+        <div id="principal">
+            <header>
+                <h1>Bloggito</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Categorias</li>
+                    <li>Acerca de</li>
+                </ul>
 
-      </aside>
-      <footer>
-        2017
-      </footer>
-    </div>
+               <input type="button" value="Iniciar sesión" id="iniciar" class="sesion" onclick="formingreso()">
+                <input type="button" value="Registrarse" id="registrarse" class="sesion" onclick="formRegistro()"  >
+                <input type="button" value="Cerrar sesión" id="cerrar" class="sesion" onclick="cerrar()">
+                <input type="button" value="nueva Publicacion" id="nueva" class="sesion" onclick="publicar()">
+                <br>
+                <input type="button" value="Crear una nueva publicacion" disabled>
+            </nav>
+            <div id="pub">
 
-  </body>
+            </div>
+            <footer>
+                2017
+            </footer>
+        </div>
+
+    </body>
 </html>

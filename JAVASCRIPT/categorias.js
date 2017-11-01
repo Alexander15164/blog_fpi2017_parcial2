@@ -1,19 +1,17 @@
-function publicar4(vector){
+function publicar3(vector){
     var loc = document.location.href;
-    console.log(loc);
-    
     var idurl = loc.split('=')[1];
-    alert("el id es:"+ idurl);
+    var cate="4";
+    //alert("el id es:"+ idurl);
 
     console.log("entro");
-    console.log(vector[0].identificador);
     for (var i = vector.length-1 ;i>= 0; i--) {
-      if (vector[i].identificador==idurl) {
+      if (vector[i].categoria==cate) {
 
 
       texto=vector[i].publicacion;
 
-      var capa= document.getElementById("capa");
+      var capa= document.getElementById("pub");
 
       var h1= document.createElement("h1")
       h1.innerHTML=vector[i].titulo;
@@ -30,11 +28,11 @@ function publicar4(vector){
       capa.appendChild(p);
 
       var h5 = document.createElement("h5");
-      h5.innerHTML = vector[i].author;
+      h5.innerHTML = vector[i].autor;
       capa.appendChild(h5);
 
       var h6 = document.createElement("h6");
-      h6.innerHTML = vector[i].fecha;
+      h6.innerHTML = vector[i].tiempo;
       capa.appendChild(h6);
 
       var a = document.createElement("a");
@@ -44,5 +42,7 @@ function publicar4(vector){
       capa.appendChild(a);
     }
     }
-}
+  }
+  function cargarCate(idcate){
+  pasarVariables("noticiaCate.html",idcate);}
 
