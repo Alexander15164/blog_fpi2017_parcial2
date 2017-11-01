@@ -1,7 +1,7 @@
 function publicar3(vector){
     var loc = document.location.href;
     var idurl = loc.split('=')[1];
-    var cate="4";
+    var cate=idurl;
     //alert("el id es:"+ idurl);
 
     console.log("entro");
@@ -37,7 +37,7 @@ function publicar3(vector){
 
       var a = document.createElement("a");
       a.innerHTML = "Ver publicacion";
-      a.setAttribute("href", "mostrarArti.html");
+//      a.setAttribute("href", "mostrarArticu.html");
       a.setAttribute("onclick","cargar('"+vector[i].identificador+"')");
       capa.appendChild(a);
     }

@@ -19,25 +19,31 @@
       </header>
       <div id="slogan">Dicelo tú mismo</div>
       <nav id="navegador">
-        <ul>
-          <li><a href="index.html" class="barra"> Inicio </a></li>
-          <li><select>
-              <option value="0">Seleccione una categoría</option>
-              <option value="1">Deportes</option>
-              <option value="2">Comedia</option>
-              <option value="3">Politica</option>
-              <option value="4">Higiene</option>
-              <option value="5">Juegos</option>
-              <option value="6">Anime</option>
-          </select></li>
-          <li><a href="#" class="barra"> Acerca de</a></li>
-          <li><a href="#" class="barra"> Mas vistas</a></li>
-        </ul>
-        <input type="button" value="Iniciar sesión" id="iniciar" class="sesion" onclick="formingreso()">
-      <input type="button" value="Registrarse" id="registrarse" class="sesion" onclick="formRegistro()">
-      <input type="button" value="Cerrar sesión" id="cerrar" class="sesion" onclick="cerrar()">
-      <input type="button" value="nueva publicacion" id="nueva" class="sesion" onclick="publicar()">
-      </nav>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Categorias</a>
+                        <ul>
+                            <li><a onclick="llamar(1)">Deportes</a></li>
+                            <li><a onclick="llamar(2)">Comedia</a></li>
+                            <li><a onclick="llamar(3)">Politica</a></li>
+                            <li><a onclick="llamar(4)">Higiene</a></li>
+                            <li><a onclick="llamar(5)">Juegos</a></li>
+                            <li><a onclick="llamar(6)">Anime</a></li>
+                            <li><a onclick="llamar(7)">Tecnologia</a></li>
+                            <li><a onclick="llamar(8)">Naturaleza</a></li>
+                            <li><a onclick="llamar(9)">Ciencias</a></li>
+                            <li><a onclick="llamar(10)">Personal</a></li>
+                            <li><a onclick="llamar(11)">Otros</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <input type="button" value="Iniciar sesión" id="iniciar" class="sesion" onclick="formingreso()">
+                <input type="button" value="Registrarse" id="registrarse" class="sesion" onclick="formRegistro()"  >
+                <input type="button" value="Cerrar sesión" id="cerrar" class="sesion" onclick="cerrar()">
+                <input type="button" value="nueva Publicacion" id="nueva" class="sesion" onclick="publicar()">
+
+            </nav>
       <br><br><br>
       <h1>Publicaciones Recientes</h1>
       <br>
@@ -47,11 +53,11 @@
 
 
     </div>
-    <footer id="final">
-      2017
-      <br>
-      entra a la prueva de nuestra prueva xd xd xd xd xd
-      <br>
-    </footer>
+     <footer id="final">
+            2017 Bloggito, Dicelo tu mismo
+            <br>
+            Todos los derechos reservados
+            <br>
+        </footer>
   </body>
 </html>

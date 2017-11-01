@@ -34,7 +34,6 @@ body{
   border-radius:40px;
   border-bottom: none !important;
 }
-
 #nombre::first-letter{
   font-size: 110px;
   color: #f7f7f7;
@@ -72,7 +71,12 @@ body{
                  0 3px 5px rgba(0,0,0,.2),
                  0 5px 10px rgba(0,0,0,.25),
                  0 10px 10px rgba(0,0,0,.2),
-                 10px 20px 10px rgba(0,0,0,.15);  }
+                 10px 20px 10px rgba(0,0,0,.15);
+}
+#nombre a{
+  color: #6a6a6a;
+  text-decoration: none;
+}
 #slogan {
   width:200px;
   height:80px;
@@ -123,41 +127,109 @@ body{
   height:0;
   border-top:15px solid transparent;
   border-right:50px solid rgb(129, 3, 3);
-  border-bottom:15px solid transparent;}
+  border-bottom:15px solid transparent;
+}
 
-  #navegador{
-    background-color: rgb(129, 3, 3);
-    height: 50px;
-    width: 100%;
-    font-style: oblique;
-    color: white;
-    position: absolute;
-    top: 150px;
+#navegador{
+  background: -webkit-gradient(linear, center top, center bottom, from(##810303), to(#bf0808));
+  background: -moz-gradient(linear, center top, center bottom, from(##810303), to(#bf0808));
+  background-image: linear-gradient(#810303, #810303);
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.82);
+  padding: 0 50px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  font-style: oblique;
+  color: white;
+  position: absolute;
+  top: 150px;
 }
 #navegador ul{
    list-style-type: none;
+   font-size: 14%;
 
-   font-size: 145%
 }
 #navegador li{
    display: inline;
-
    margin: 0 10px 0 0;
 }
 #navegador a{
   color: white;
   text-decoration: none;
-  font-weight:400;
-  content:"   ";
+  font-weight:400px;
+  content:" ";
   padding-left: 35px;
     justify-content: center;
     align-content: center;
     flex-direction: column;
     font-family: fantasy;
 }
-#nombre a{
-  color: #6a6a6a;
-  text-decoration: none;
+.menu li {
+	float: left;
+	position: relative;
+}
+.menu li a {
+	color: #292828;
+	display: block;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 6px 12px;
+	margin: 8px 8px;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.menu li a:hover {
+	background: -webkit-gradient(linear, center top, center bottom, from(#ededed), to(#fff));
+  background: -moz-gradient(linear, center top, center bottom, from(##810303), to(#bf0808));
+	background-image: linear-gradient(#201919, #2f2626);
+	border-radius: 12px;
+	box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.76);
+	color: #222;
+}
+/* Dropdown styles */
+.menu ul {
+	position: absolute;
+	left: -9999px;
+	list-style: none;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+.menu ul li {
+	float: none;
+}
+.menu ul a {
+	white-space: nowrap;
+}
+/* Displays the dropdown on hover and moves back into position */
+.menu li:hover ul {
+	background: rgba(9, 8, 8, 0.79);
+	border-radius: 0 0 6px 6px;
+	box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.76);
+	left: 1px;
+	opacity: 1;
+}
+/* Persistant Hover State */
+.menu li:hover a {
+	background: -webkit-gradient(linear, center top, center bottom, from(#413e3e), to(#635e5e));
+  background: -moz-gradient(linear, center top, center bottom, from(##810303), to(#bf0808));
+	background-image: linear-gradient(#3e3939, #676464);
+	border-radius: 12px;
+  box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.63);
+	color: #222;
+}
+.menu li:hover ul a {
+	background: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+.menu li:hover ul li a:hover {
+	background: -webkit-gradient(linear, center top, center bottom, from(#444040), to(#444040));
+  background: -moz-gradient(linear, center top, center bottom, from(##810303), to(#bf0808));
+	background-image: linear-gradient(#444040, #a6a2a2);
+	border-radius: 12px;
+	box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,0.3);
 }
 .sesion{
   background-color: #6a6a6a;
@@ -214,7 +286,7 @@ background: rgb(129, 3, 3);
   font-family: fantasy;
   width:99.6%;
   height: 50px;
-  position: absolute;
+  position: relative;
   bottom: auto;
 }
 .imagenes{
@@ -222,12 +294,18 @@ background: rgb(129, 3, 3);
   height: 300px;
 
 }
+#publicReciente{
+  text-align: center;
+}
 #capa{
   border: 3px solid grey;
-  width: 75%;
+  width: 100%;
+  text-align: center;
 }
+#tituloPublic{
+  background-color: rgb(129, 3, 3);
 
-
+}
 #contArt::first-line{
   font-family: fantasy;
   font-size: 16px;
@@ -235,13 +313,23 @@ background: rgb(129, 3, 3);
 #contArt::first-letter{
   font-size: 30px;
 }
-
-
-
-/*PAGINA DE MOSTRAR PUBLICACION*/
-
-#principalreg{
-  background-color:#265da7;
+#autorPublic{
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bolder;
+}
+#fechaPublic{
+  font-size: 16px;
+  font-style: oblique;
+}
+#verPublic{
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+/*Pagina de inicio de Sesion*/
+#principalInicioSesion{
+  background-color:#f7f7f7;
   width: 95%;
   /*height:100%;*/
   position:relative;
@@ -250,77 +338,62 @@ background: rgb(129, 3, 3);
     font-family: fantasy;
   -webkit-border-radius: 18;
   -moz-border-radius: 18;
-  border-radius:40px;
-  border-bottom: none !important;
+  border-radius:40px
 }
+#lateral2{
+  background-color: #28b882;
+  text-align: center;
+  width: 100%;
 
-nav #navegador {
-	background: -webkit-gradient(linear, center top, center bottom, from(#fff), to(#ccc));
-	background-image: linear-gradient(#143247, #ccc);
-	border-radius: 6px;
-	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.82);
-	padding: 0 10px;
-	position: relative;
 }
-.menu li {
-	float: left;
-	position: relative;
+#final2{
+  background-color: rgb(52, 52, 56);
+  text-align: center;
+  width: 100%;
 }
-.menu li a {
-	color: #292828;
-	display: block;
-	font-size: 14px;
-	line-height: 20px;
-	padding: 6px 12px;
-	margin: 8px 8px;
-	vertical-align: middle;
-	text-decoration: none;
+/*Para la pagina de Registro*/
+#principalRegistro{
+  background-color:#f7f7f7;
+  width: 95%;
+  /*height:100%;*/
+  position:relative;
+    top: 50%;
+    left: 2.5%;
+    font-family: fantasy;
+  -webkit-border-radius: 18;
+  -moz-border-radius: 18;
+  border-radius:40px
 }
-
-.menu li a:hover {
-	background: -webkit-gradient(linear, center top, center bottom, from(#ededed), to(#fff));
-	background-image: linear-gradient(#454141, #fff);
-	border-radius: 12px;
-	box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.63);
-	color: #222;
+#lateral3{
+  background-color: #dbe6ee;
+  text-align: center;
+  width: 100%;
 }
-.menu ul {
-	position: absolute;
-	left: -9999px;
-	list-style: none;
-	opacity: 0;
-	transition: opacity 1s ease;
+#final3{
+  background-color: rgb(52, 52, 56);
+  text-align: center;
+  width: 100%;
 }
-
-.menu ul li {
-	float: none;
+/*Para Escribir publicacion*/
+#principalEscribirPublic{
+    background-color:#f7f7f7;
+  width: 95%;
+  /*height:100%;*/
+  position:relative;
+    top: 50%;
+    left: 2.5%;
+    font-family: fantasy;
+  -webkit-border-radius: 18;
+  -moz-border-radius: 18;
+  border-radius:40px
 }
-
-.menu ul a {
-	white-space: nowrap;
+#final4{
+  background-color: rgb(52, 52, 56);
+  text-align: center;
+  width: 100%;
 }
-.menu li:hover ul {
-	background: rgba(57, 54, 54, 0.78);
-	border-radius: 0 0 6px 6px;
-	box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.66);
-	left: 5px;
-	opacity: 1;
-}
-.menu li:hover a {
-	background: -webkit-gradient(linear, center top, center bottom, from(#ccc), to(#ededed));
-	background-image: linear-gradient(#5d5858, #ededed);
-	border-radius: 12px;
-	box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.67);
-	color: #222;
-}
-.menu li:hover ul a {
-	background: none;
-	border-radius: 0;
-	box-shadow: none;
-}
-.menu li:hover ul li a:hover {
-	background: -webkit-gradient(linear, center top, center bottom, from(#eee), to(#fff));
-	background-image: linear-gradient(#534d4d, #fff);
-	border-radius: 12px;
-	box-shadow: inset 0px 0px 4px 2px rgba(0, 0, 0, 0.57);
+#lateral4{
+  background-color: #dbe6ee;
+  text-align: center;
+  width: 100%;
 }

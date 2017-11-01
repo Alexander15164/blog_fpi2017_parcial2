@@ -27,6 +27,7 @@ function llamarPublicaciones(pan) {
 
     };
     llamador.open('GET', url3, true);
+    llamador.setRequestHeader('Cache-Control', 'no-cache');
     llamador.send();
     console.log(almacenador);
 }
@@ -37,7 +38,7 @@ function puente2(cont) {
 function publicar2(vector) {
      for (var i = vector.length-1 ;i>= 0; i--) {
     texto=vector[i].publicacion;
-    texto= texto.substring(0,100)+"..."
+    texto= texto.substring(0,25)+"..."
     var capa= document.getElementById("capa");
 
     var h1= document.createElement("h1")
@@ -49,10 +50,10 @@ function publicar2(vector) {
     imagen.setAttribute("class", "imagenes");
     capa.appendChild(imagen);
 
-    var p = document.createElement("p");
-    p.innerHTML = vector[i].publicacion;
-    p.setAttribute("id", "contArt")
-    capa.appendChild(p);
+//    var p = document.createElement("p");
+//    p.innerHTML = vector[i].publicacion;
+//    p.setAttribute("id", "contArt")
+//    capa.appendChild(p);
 
     var h5 = document.createElement("h5");
     h5.innerHTML = vector[i].autor;
@@ -72,6 +73,11 @@ function publicar2(vector) {
 function cargar(id){
         console.log(id);
         pasarVariables("mostrarArticu.html", id);
+        console.log(id);
+      }
+function cargar2(id){
+        console.log(id);
+        pasarVariables("categorias.html", id);
         console.log(id);
       }
 

@@ -22,6 +22,7 @@ window.onload = llamarUsuarios();
         
     };
     llamador.open('GET', url3 , true);
+    llamador.setRequestHeader('Cache-Control', 'no-cache');
     llamador.send();
     
     console.log(almacenador);

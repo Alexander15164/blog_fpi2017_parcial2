@@ -104,19 +104,37 @@ function cerrar() {
 }
 function verificadorURL() {
     var url = document.location.href;
-    console.log(url);
-    var loc = url.split('/')[4];
+    var inicio = url.lastIndexOf("/");
+    var final = url.lastIndexOf("l");
+    var loc = url.substring(inicio,final);
     console.log(loc);
-    if (loc == "EscribirPublic.html") {
+    if (loc == "/EscribirPublic.htm") {
         return contr = 1;
-    } else if (loc == "registro.html") {
+    } else if (loc == "/registro.htm") {
         return contr = 2;
-    } else if (loc == "categoria.html") {
+    } else if (loc == "/categoria.htm") {
         return contr = 3;
-    }else if(loc == "mostrarArticu.html"){
+    }else if(loc == "/mostrarArticu.htm"){
         return contr = 4;
     }
     return;
 }
+function llamar(id){
+    var url4 = "categoria.html?id=";
+    url4 = url4+id;
+     
+      location.href=url4;
+}
 
+function descubrir(){
+  document.getElementById("pass").setAttribute("type", "text");
 
+}
+function descubrir2(){
+  document.getElementById("confirmpass").setAttribute("type", "text");
+
+}
+function cubrir(){
+  document.getElementById("pass").setAttribute("type", "password");
+
+}
