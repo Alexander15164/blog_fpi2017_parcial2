@@ -1,11 +1,5 @@
 body{
-  background-color: #000000;  height: 100%;
-}
-@font-face {
-font-family: Dope;
-src: url("FONTS/Dopestyle.ttf") format("truetype");
-font-weight: bold;
-font-style: italic;
+  background-color: #000000;
 }
 #cabecera1{
   background: -webkit-linear-gradient( grey , black); /* For Safari 5.1 to 6.0 */
@@ -30,12 +24,12 @@ font-style: italic;
 #principal{
   background-color:#f7f7f7;
   width: 95%;
-  height:100%;
-
-
+  /*height:100%;*/
   position:relative;
     top: 50%;
     left: 2.5%;
+
+
   -webkit-border-radius: 18;
   -moz-border-radius: 18;
   border-radius:40px;
@@ -219,6 +213,7 @@ background: rgb(129, 3, 3);
   position: relative;
   top: 21%;
 }
+
 #anteriores{
   border: 3px solid rgb(129, 3, 3);
   width:99.6%;
@@ -334,7 +329,7 @@ background: rgb(129, 3, 3);
   font-weight: bold;
   width: 87px;
   border-radius: 15px;
-text-shadow: 5px 1px 0 #ccc,
+  text-shadow: 5px 1px 0 #ccc,
                  0 2px 0 #c9c9c9,
                  0 3px 0 #bbb,
                  0 4px 0 #b9b9b9,
@@ -531,4 +526,11 @@ background: rgb(129, 3, 3);
       color: grey;
       text-decoration: none;
         font-family: fantasy;
+    }
+    .imagenes{
+      width: ;
+      height: 60%
+    }
+    #capa{
+      border: 3px solid grey;
     }

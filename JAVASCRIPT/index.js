@@ -27,8 +27,8 @@ function mostrarpu() {
 
 }
 var url1 = verificadorURL();
-if(url1==2 || url1==1){
-   window.onload = function tiempo() {
+//if (url1 == 1 || url1 == 2) {
+    function tiempo() {
         var tiempo;
         var horas;
         var segundos;
@@ -43,21 +43,38 @@ if(url1==2 || url1==1){
         ao = tiempo.getFullYear();
         mes = tiempo.getMonth();
         dia = tiempo.getDate();
-        if(url1==1){
-            publicacion(ao, mes, dia, horas, minutos, segundos);
-        }else{
+        if (url1 == 1) {
+            if (localStorage.getItem("user") == undefined) {
+                window.location.replace("404.html");
+            } else {
+                publicacion(ao, mes, dia, horas, minutos, segundos);
+            }
+        } else {
             usuarios(ao, mes, dia, horas, minutos, segundos);
         }
-        }
-}else if(url1==0){
+    }
+
+//}
+
+if (url1 == 1 || url1 == 2) {
+    window.onload = function verificar2() {
+        tiempo();
+    if (localStorage.user != undefined) {
+        proceso();
+    } else {
+        inverso();
+    }}
+} else {
     window.onload = function verificar() {
-        if (localStorage.user != undefined) {
-            proceso();
-        } else {
-            inverso();
-        }
+        llamarPublicaciones();
+    if (localStorage.user != undefined) {
+        proceso();
+    } else {
+        inverso();
     }
-    }
+};
+}
+
 function publicacion(ao, mes, dia, horas, minutos, segundos) {
     var identificador;
     var autor = localStorage.getItem("user");
@@ -78,21 +95,23 @@ function usuarios(ao, mes, dia, horas, minutos, segundos) {
 }
 
 function cerrar() {
+    alert("Cerrado sesion :" + localStorage.getItem("user"));
     localStorage.removeItem("user");
     mostrar();
 }
-function verificadorURL(){
+function verificadorURL() {
     var url = document.location.href;
+    console.log(url);
     var loc = url.split('/')[4];
     console.log(loc);
-    if(loc=="EscribirPublic.html"){
-        return contr=1;
-    }else if(loc=="registro.html"){
-        return contr=2;
-    }else if(loc == "index.html"){
-        return contr=0;
+    if (loc == "EscribirPublic.html") {
+        return contr = 1;
+    } else if (loc == "registro.html") {
+        return contr = 2;
+    } else if (loc == "index.html") {
+        return contr = 0;
     }
-    return ;
+    return;
 }
-    
+
 
